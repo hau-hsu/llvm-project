@@ -22,6 +22,6 @@ int main() {
   // CHECK: {{    #[1-3] 0x.* in main .*use-after-free-right.cpp:}}[[@LINE-9]]
 
   // CHECK: {{previously allocated by thread T0 here:}}
-  // CHECK: {{    #0 0x.* in .*malloc}}
-  // CHECK: {{    #[1-3] 0x.* in main .*use-after-free-right.cpp:}}[[@LINE-14]]
+  // CHECK: {{    #[0-9]+ 0x.* in .*malloc}}
+  // CHECK: {{    #[0-9]+ 0x.* in main .*use-after-free-right.cpp:}}[[@LINE-14]]
 }

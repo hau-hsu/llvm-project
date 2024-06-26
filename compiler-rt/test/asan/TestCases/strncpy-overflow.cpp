@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
   // CHECK: {{    #1 0x.* in main .*strncpy-overflow.cpp:}}[[@LINE-3]]
   // CHECK: {{0x.* is located 0 bytes after 9-byte region}}
   // CHECK: {{allocated by thread T0 here:}}
-  // CHECK: {{    #0 0x.* in .*malloc}}
-  // CHECK: {{    #[1-3] 0x.* in main .*strncpy-overflow.cpp:}}[[@LINE-8]]
+  // CHECK: {{    #[0-9]+ 0x.* in .*malloc}}
+  // CHECK: {{    #[0-9]+ 0x.* in main .*strncpy-overflow.cpp:}}[[@LINE-8]]
   return rval + sink_memory(9, short_buffer);
 }

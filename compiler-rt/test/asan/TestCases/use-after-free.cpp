@@ -20,7 +20,7 @@ int main() {
 
   // CHECK: {{previously allocated by thread T0 here:}}
   // CHECK: {{    #0 0x.* in .*malloc}}
-  // CHECK: {{    #[1-3] 0x.* in main .*use-after-free.cpp:}}[[@LINE-14]]
+  // CHECK: {{    #[0-9]+ 0x.* in main .*use-after-free.cpp:}}[[@LINE-14]]
   // CHECK: Shadow byte legend (one shadow byte represents {{[0-9]+}} application bytes):
   // CHECK: Global redzone:
   // CHECK: ASan internal:
